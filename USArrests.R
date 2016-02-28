@@ -30,9 +30,16 @@ summary(USArrests$Rape)
 hist(USArrests$Murder)
 #8 US states have 10 arrests per 100,000 residents for murder
 #12 US states have around 4 arrests per 100,000 residents for murder
+
+## MBK: I suggest you save the results of the graphs into .png files so you
+# could include them into a markdown document for the repo 
+# such as the README.md. 
 hist(USArrests$Assault)
+dev.print(png, "Assualt.png", width = 1024, height = 720)
 hist(USArrests$UrbanPop)
+dev.print(png, "UrbanPop.png", width = 1024, height = 720)
 hist(USArrests$Rape)
+dev.print(png, "Rape.png", width = 1024, height = 720)
 #variable rape is skewed
 
 #using the package dplyr for piping
