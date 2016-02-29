@@ -14,6 +14,12 @@ library(dplyr)
 data(nhtemp)
 #summary statistics#
 summary(nhtemp)
+
+#plot data by time
+plot(nhtemp,
+    main="Average Yearly Temperature 1912-1971,
+    ylab="Temperature (Fahrenheit)")
+
 #histogram: frequency of average yearly temperatures#
 hist(nhtemp, 
      main="Frequency of Average Yearly Temperatures", 
@@ -23,4 +29,3 @@ log(nhtemp) %>%
   hist(main="Logged Frequency of Average Yearly Temperatures (1912-1971)",
        xlab="temperature")
 
-plot(nhtemp)
