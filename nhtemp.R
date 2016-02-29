@@ -22,3 +22,5 @@ hist(nhtemp,
 log(nhtemp) %>% 
   hist(main="Logged Frequency of Average Yearly Temperatures (1912-1971)",
        xlab="temperature")
+
+plot(nhtemp)
