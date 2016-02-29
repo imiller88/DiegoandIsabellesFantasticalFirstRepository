@@ -1,3 +1,10 @@
+#Dynamic linking: source USArrests.R file
+#setting working directory (this will need to be set by user)
+getwd()
+list.files()
+setwd('/Users/isabellemiller/GitHub/DiegoandIsabellesFantasticalFirstRepository/')
+source('USArrests.R')
+
 #Data Exploration: Average Yearly Temperatures in New Haven, CT from 1912-1971#
 #open piping package#
 library(dplyr)
