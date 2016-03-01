@@ -1,6 +1,6 @@
 #R Source Code File 2#
 #Exploratory Analysis of the USArrests dataset#
-#Isabelle and Diego??s First Pair Assignment#
+#First Pair Assignment by Isabelle and Diego#
 #Collaborative Social Science Data Analysis#
 
 #Opening dataset and understanding its structure
@@ -8,6 +8,7 @@
 data("USArrests")
 ls()
 names(USArrests)
+library(dplyr)
 
 #####Summary statistics#####
 summary(USArrests$Murder)
@@ -62,11 +63,8 @@ hist(USArrests$UrbanPop,
 hist(USArrests$Rape,
      main = "Arrests for Rape across US states",
      ylab = "Number of US states",
-     xlab = "Arrests for Assault per 100k residents")
-#variable rape is skewed
-
-#using the package dplyr for piping
-library(dplyr)
+     xlab = "Arrests for Rape per 100k residents")
+#variable rape is slightly skewed
 #we log the variable rape since its distribution is skewed
 log(USArrests$Rape) %>% hist
 
@@ -104,8 +102,7 @@ IQR(USArrests$UrbanPop)
 IQR(USArrests$Rape)
 #IQR Rape= 11.1
 
-# Boxplots for three crime variables
-
+#####Boxplots for three crime variables#####
 boxplot(USArrests$Murder,
         main = "Murder Arrests",
         ylab = "Arrests per 100k Inhabitants")
