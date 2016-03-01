@@ -30,6 +30,27 @@ IQR(USArrests$Rape)
 #The data cover the values for those variables 
 #in each of the 50 US states in 1973
 
+#####Another way of getting summary statistics: Looping for Mean and Median#####
+
+for (i in 1:length(names(USArrests))) {
+  USArrests[, i] %>%
+    mean() %>%
+    round(digits = 1) %>%
+    paste(names(USArrests)[i], ., '\n') %>%  
+    cat()
+}
+#Murder=7.8 Assault=170.8 UrbanPop=65.5 Rape=21.2
+
+
+for (i in 1:length(names(USArrests))) {
+  USArrests[, i] %>%
+    median() %>%
+    round(digits = 1) %>%
+    paste(names(USArrests)[i], ., '\n') %>%  
+    cat()
+}
+#Murder=7.2 Assault=159 UrbanPop=66 Rape=20.1
+
 #####Histograms#####
 hist(USArrests$Murder,
      main = "Arrests for Murder across US states",
@@ -55,10 +76,6 @@ hist(USArrests$Rape,
 library(dplyr)
 #we log the variable rape since its distribution is skewed
 log(USArrests$Rape) %>% hist
-<<<<<<< HEAD
-###amdeioemkdmedkmed
-=======
-##comment JM: What does this help you to explain/show?
 
 # Boxplots for three crime variables
 
@@ -71,4 +88,5 @@ boxplot(USArrests$Assault,
 boxplot(USArrests$Rape,
         main = "Rape Arrests",
         ylab = "Arrests per 100k Inhabitants")
->>>>>>> origin/master
+
+
