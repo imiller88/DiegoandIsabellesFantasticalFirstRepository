@@ -113,4 +113,18 @@ boxplot(USArrests$Rape,
         main = "Rape Arrests",
         ylab = "Arrests per 100k Inhabitants")
 
+#####Scatter plots for three crime variables#####
+plot(USArrests$Murder, USArrests$Assault,
+     main = "Murder versus Assault",
+     xlab = "Murder arrests per 100k Inhabitants",
+     ylab = "Assault arrests per 100k Inhabitants")
+plot(USArrests$Murder, USArrests$Rape,
+     main = "Murder versus Rape",
+     xlab = "Murder arrests per 100k Inhabitants",
+     ylab = "Rape arrests per 100k Inhabitants")
+plot(USArrests$Assault, USArrests$Rape,
+     main = "Assault versus Rape",
+     xlab = "Assault arrests per 100k Inhabitants",
+     ylab = "Rape arrests per 100k Inhabitants")
+
 
