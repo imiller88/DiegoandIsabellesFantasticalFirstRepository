@@ -3,7 +3,7 @@
 #Isabelle and Diego??s First Pair Assignment#
 #Collaborative Social Science Data Analysis#
 
-# Opening dataset and understanding its structure
+#Opening dataset and understanding its structure
 ?USArrests
 data("USArrests")
 ls()
@@ -11,21 +11,17 @@ names(USArrests)
 
 #####Summary statistics#####
 summary(USArrests$Murder)
-IQR(USArrests$Murder)
 #Number of arrests per 100,000 residents for murder across 50 US states
-#Median=7.3 persons, Mean=7.8 persons, Interquartile range=7.2 persons
+#Median=7.3 persons, Mean=7.8 persons
 summary(USArrests$Assault)
-IQR(USArrests$Assault)
 #Number of arrests per 100,000 residents for assault across 50 US states
-#Median=159 persons, Mean=170.8 persons, Interquartile range=140 persons
+#Median=159 persons, Mean=170.8 persons
 summary(USArrests$UrbanPop)
-IQR(USArrests$UrbanPop)
 #Percent of the population living in urban areas across 50 US states
-#Median=66.00%, Mean=65.54%, Interquartile range=23.25%
+#Median=66.00%, Mean=65.54%
 summary(USArrests$Rape)
-IQR(USArrests$Rape)
 #Number of arrests per 100,000 residents for rape across 50 US states
-#Median=20.1 persons, Mean=21.2 persons, Interquartile range=11.1 persons
+#Median=20.1 persons, Mean=21.2 persons
 
 #The data cover the values for those variables 
 #in each of the 50 US states in 1973
@@ -100,8 +96,17 @@ for (i in 1:length(names(USArrests))) {
 #UrbanPop= 32 91
 #Rape= 7.3 46
 
+IQR(USArrests$Murder)
+#IQR Murder= 7.175
 
+IQR(USArrests$Assault)
+#IQR Assault= 140
 
+IQR(USArrests$UrbanPop)
+#IQR UrbanPop= 23.25
+
+IQR(USArrests$Rape)
+#IQR Rape= 11.1
 
 # Boxplots for three crime variables
 
