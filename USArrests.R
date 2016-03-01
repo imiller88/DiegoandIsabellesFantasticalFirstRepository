@@ -54,47 +54,24 @@ hist(USArrests$Murder,
      main = "Arrests for Murder across US states",
      ylab = "Number of US states",
      xlab = "Arrests for Murder per 100k residents")
+dev.print(png, "Murder.png", width = 1024, height = 720)
 #8 US states have 10 arrests per 100,000 residents for murder
 #12 US states have around 4 arrests per 100,000 residents for murder
-<<<<<<< HEAD
-
-## MBK: I suggest you save the results of the graphs into .png files so you
-# could include them into a markdown document for the repo 
-# such as the README.md. 
-hist(USArrests$Assault)
-dev.print(png, "Assualt.png", width = 1024, height = 720)
-hist(USArrests$UrbanPop)
-dev.print(png, "UrbanPop.png", width = 1024, height = 720)
-hist(USArrests$Rape)
-dev.print(png, "Rape.png", width = 1024, height = 720)
-=======
 hist(USArrests$Assault,
      main = "Arrests for Assault across US states",
      ylab = "Number of US states",
      xlab = "Arrests for Assault per 100k residents")
+dev.print(png, "Assault.png", width = 1024, height = 720)
 hist(USArrests$UrbanPop,
      main = "Share of Urban Population across US states",
      ylab = "Number of US states",
      xlab = "Share of Urban Population (in %)")
+dev.print(png, "UrbanPop.png", width = 1024, height = 720)
 hist(USArrests$Rape,
      main = "Arrests for Rape across US states",
      ylab = "Number of US states",
-<<<<<<< HEAD
      xlab = "Arrests for Rape per 100k residents")
-<<<<<<< HEAD
-=======
-#variable rape is slightly skewed
-=======
-     xlab = "Arrests for Assault per 100k residents")
->>>>>>> master
-#variable rape is skewed
-
-#using the package dplyr for piping
-library(dplyr)
->>>>>>> pr/1
-#we log the variable rape since its distribution is skewed
-log(USArrests$Rape) %>% hist
->>>>>>> origin/master
+dev.print(png, "Rape.png", width = 1024, height = 720)
 
 #####Measures of dispersion: standard deviation, range, IQR#####
 for (i in 1:length(names(USArrests))) {
@@ -134,26 +111,32 @@ IQR(USArrests$Rape)
 boxplot(USArrests$Murder,
         main = "Murder Arrests",
         ylab = "Arrests per 100k Inhabitants")
+dev.print(png, "BoxplotMurder.png", width = 1024, height = 720)
 boxplot(USArrests$Assault,
         main = "Assault Arrests",
         ylab = "Arrests per 100k Inhabitants")
+dev.print(png, "BoxplotAssault.png", width = 1024, height = 720)
 boxplot(USArrests$Rape,
         main = "Rape Arrests",
         ylab = "Arrests per 100k Inhabitants")
+dev.print(png, "BoxplotRape.png", width = 1024, height = 720)
 
 #####Scatter plots for three crime variables#####
 plot(USArrests$Murder, USArrests$Assault,
      main = "Murder versus Assault",
      xlab = "Murder arrests per 100k Inhabitants",
      ylab = "Assault arrests per 100k Inhabitants")
+dev.print(png, "PlotMurderAssault.png", width = 1024, height = 720)
 plot(USArrests$Murder, USArrests$Rape,
      main = "Murder versus Rape",
      xlab = "Murder arrests per 100k Inhabitants",
      ylab = "Rape arrests per 100k Inhabitants")
+dev.print(png, "PlotMurderRape.png", width = 1024, height = 720)
 plot(USArrests$Assault, USArrests$Rape,
      main = "Assault versus Rape",
      xlab = "Assault arrests per 100k Inhabitants",
      ylab = "Rape arrests per 100k Inhabitants")
+dev.print(png, "PlotAssaultRape.png", width = 1024, height = 720)
 
 #####Correlation coefficients#####
 cor.test(USArrests$Murder, USArrests$Assault)
@@ -166,5 +149,8 @@ cor.test(USArrests$Assault, USArrests$Rape)
 #####Summarizing with LOESS#####
 library(ggplot2)
 ggplot2::ggplot(USArrests, aes(Murder, Assault)) + geom_point() + geom_smooth() + theme_bw()
+dev.print(png, "ggplotMurderAssault.png", width = 1024, height = 720)
 ggplot2::ggplot(USArrests, aes(Murder, Rape)) + geom_point() + geom_smooth() + theme_bw()
+dev.print(png, "ggplotMurderRape.png", width = 1024, height = 720)
 ggplot2::ggplot(USArrests, aes(Assault, Rape)) + geom_point() + geom_smooth() + theme_bw()
+dev.print(png, "ggplotAssaultRape.png", width = 1024, height = 720)
