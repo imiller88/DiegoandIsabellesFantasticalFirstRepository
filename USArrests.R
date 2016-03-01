@@ -26,8 +26,7 @@ summary(USArrests$Rape)
 #The data cover the values for those variables 
 #in each of the 50 US states in 1973
 
-#####Another way of getting summary statistics: Looping for Mean and Median#####
-
+#####Another way of getting measures of central tendency: Looping for Mean and Median#####
 for (i in 1:length(names(USArrests))) {
   USArrests[, i] %>%
     mean() %>%
@@ -36,8 +35,6 @@ for (i in 1:length(names(USArrests))) {
     cat()
 }
 #Murder=7.8 Assault=170.8 UrbanPop=65.5 Rape=21.2
-
-
 for (i in 1:length(names(USArrests))) {
   USArrests[, i] %>%
     median() %>%
@@ -74,7 +71,6 @@ library(dplyr)
 log(USArrests$Rape) %>% hist
 
 #####Measures of dispersion: standard deviation, range, IQR#####
-
 for (i in 1:length(names(USArrests))) {
   USArrests[, i] %>%
     sd() %>%
@@ -82,8 +78,15 @@ for (i in 1:length(names(USArrests))) {
     paste(names(USArrests)[i], ., '\n') %>%  
     cat()
 }
-#Murder=4.4 Assault=83.3 UrbanPop=14.5 Rape=9.4
-
+#Standard deviation Murder=4.4 Assault=83.3 UrbanPop=14.5 Rape=9.4
+for (i in 1:length(names(USArrests))) {
+  USArrests[, i] %>%
+    var() %>%
+    round(digits = 1) %>%
+    paste(names(USArrests)[i], ., '\n') %>%  
+    cat()
+}
+#Variation Murder=19 Assault=6945.2 UrbanPop=209.5 Rape=87.7
 for (i in 1:length(names(USArrests))) {
   USArrests[, i] %>%
     range() %>%
@@ -91,20 +94,13 @@ for (i in 1:length(names(USArrests))) {
     paste(names(USArrests)[i], ., '\n') %>%  
     cat()
 }
-#Murder= 0.8 17.4
-#Assault= 45 337
-#UrbanPop= 32 91
-#Rape= 7.3 46
-
+#Range Murder= 0.8 17.4 Assault= 45 337 UrbanPop= 32 91 Rape= 7.3 46
 IQR(USArrests$Murder)
 #IQR Murder= 7.175
-
 IQR(USArrests$Assault)
 #IQR Assault= 140
-
 IQR(USArrests$UrbanPop)
 #IQR UrbanPop= 23.25
-
 IQR(USArrests$Rape)
 #IQR Rape= 11.1
 
