@@ -151,14 +151,14 @@ cor.test(USArrests$Assault, USArrests$Rape)
 ggplot2::ggplot(USArrests, aes(Murder, Assault)) + geom_point() + geom_smooth() + theme_bw() + ggtitle("Murder arrests-Assault arrests Correlation") +
   xlab("Murder arrests per 100k habitants") +
   ylab("Assault arrests per 100k habitants")
-dev.print(png, "ggplotMurderAssault.png", width = 1024, height = 720)
+dev.print(png, "ggplotMurderAssaultwithtitle.png", width = 1024, height = 720)
 ggplot2::ggplot(USArrests, aes(Murder, Rape)) + geom_point() + geom_smooth() + theme_bw() + ggtitle("Murder arrests-Rape arrests Correlation") +
   xlab("Murder arrests per 100k habitants") +
   ylab("Rape arrests per 100k habitants")
-dev.print(png, "ggplotMurderRape.png", width = 1024, height = 720)
+dev.print(png, "ggplotMurderRapewithtitle.png", width = 1024, height = 720)
 ggplot2::ggplot(USArrests, aes(Assault, Rape)) + geom_point() + geom_smooth() + theme_bw() + ggtitle("Assault arrests-Rape arrests Correlation") +
   xlab("Assault arrests per 100k habitants") +
   ylab("Rape arrests per 100k habitants")
-dev.print(png, "ggplotAssaultRape.png", width = 1024, height = 720)
+dev.print(png, "ggplotAssaultRapewithtitle.png", width = 1024, height = 720)
 
 
