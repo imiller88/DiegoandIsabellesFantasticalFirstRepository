@@ -14,6 +14,7 @@ This a summary of the descriptive statistics from Diego and Isabelle's first ass
 #Data Set 1: Average Yearly Temperatures in New Haven 1912-1971
 >
 >
+<<<<<<< HEAD
 ###Introduction to the DataSet
 The core R data set nhtemp, titled "Average Yearly Temperatures in New Haven" is a time series of 60 observations recording the mean annual temperature in degrees Fahrenheit in New Haven, Connecticut, between 1912 and 1971.
 
@@ -32,6 +33,23 @@ plot(nhtemp,
 ```
 
 
+=======
+Following are some descriptive statistics of the core R data set nhtemp, a time series of 60 observations recording the mean annual temperature in degrees Fahrenheit in New Haven, Connecticut, between 1912 and 1971.
+
+```{r, echo=FALSE}
+hist(nhtemp, 
+     main="Frequency of Average Yearly Temperatures", 
+     xlab="temperature")
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(nhtemp)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+>>>>>>> master
 
 To cite out of bibliography:
 bibliography:
