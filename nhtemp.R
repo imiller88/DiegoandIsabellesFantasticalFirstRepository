@@ -17,7 +17,7 @@ summary(nhtemp)
 
 #plot data by time
 plot(nhtemp,
-    main="Average Yearly Temperature 1912-1971,
+    main="Average Yearly Temperature 1912-1971",
     ylab="Temperature (Fahrenheit)")
 
 #histogram: frequency of average yearly temperatures#

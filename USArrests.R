@@ -52,6 +52,18 @@ hist(USArrests$Murder,
      xlab = "Arrests for Murder per 100k residents")
 #8 US states have 10 arrests per 100,000 residents for murder
 #12 US states have around 4 arrests per 100,000 residents for murder
+<<<<<<< HEAD
+
+## MBK: I suggest you save the results of the graphs into .png files so you
+# could include them into a markdown document for the repo 
+# such as the README.md. 
+hist(USArrests$Assault)
+dev.print(png, "Assualt.png", width = 1024, height = 720)
+hist(USArrests$UrbanPop)
+dev.print(png, "UrbanPop.png", width = 1024, height = 720)
+hist(USArrests$Rape)
+dev.print(png, "Rape.png", width = 1024, height = 720)
+=======
 hist(USArrests$Assault,
      main = "Arrests for Assault across US states",
      ylab = "Number of US states",
@@ -63,7 +75,22 @@ hist(USArrests$UrbanPop,
 hist(USArrests$Rape,
      main = "Arrests for Rape across US states",
      ylab = "Number of US states",
+<<<<<<< HEAD
      xlab = "Arrests for Rape per 100k residents")
+<<<<<<< HEAD
+=======
+#variable rape is slightly skewed
+=======
+     xlab = "Arrests for Assault per 100k residents")
+>>>>>>> master
+#variable rape is skewed
+
+#using the package dplyr for piping
+library(dplyr)
+>>>>>>> pr/1
+#we log the variable rape since its distribution is skewed
+log(USArrests$Rape) %>% hist
+>>>>>>> origin/master
 
 #####Measures of dispersion: standard deviation, range, IQR#####
 for (i in 1:length(names(USArrests))) {
