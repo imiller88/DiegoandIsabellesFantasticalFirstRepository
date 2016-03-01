@@ -3,7 +3,7 @@ This is README for the submission of the First Pair Assignment by Diego and Isab
 
 _Deadline 4 March, 10% of final grade._
 
-For the purposes of this assignment, we will be examining the following core R data sets:
+For the purposes of this assignment, we will be examining the following core R data sets and playing with some descriptive statistics:
 
 1) nhtemp, a time series of 60 observations of the mean annual temperature in degrees Fahrenheit in New Haven, Connecticut, from 1912 to 1971, and 
 
