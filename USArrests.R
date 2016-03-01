@@ -39,3 +39,4 @@ hist(USArrests$Rape)
 library(dplyr)
 #we log the variable rape since its distribution is skewed
 log(USArrests$Rape) %>% hist
+###amdeioemkdmedkmed
