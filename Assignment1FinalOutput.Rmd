@@ -62,8 +62,46 @@ There are 50 observations on the 4 following variables:
 
 ###Descriptive Statistics
 
-```{r, echo=FALSE}
-
+```{r}
+summary(USArrests$Murder)
 ```
 
+```{r}
+summary(USArrests$Assault)
+```
 
+```{r}
+summary(USArrests$UrbanPop)
+```
+
+```{r}
+summary(USArrests$Rape)
+```
+
+```{r, echo=FALSE}
+hist(USArrests$Murder,
+     main = "Arrests for Murder across US states",
+     ylab = "Number of US states",
+     xlab = "Arrests for Murder per 100k residents")
+```
+
+```{r, echo=FALSE}
+hist(USArrests$Assault,
+     main = "Arrests for Assault across US states",
+     ylab = "Number of US states",
+     xlab = "Arrests for Assault per 100k residents")
+```
+
+```{r, echo=FALSE}
+hist(USArrests$UrbanPop,
+     main = "Share of Urban Population across US states",
+     ylab = "Number of US states",
+     xlab = "Share of Urban Population (in %)")
+```
+
+```{r, echo=FALSE}
+hist(USArrests$Rape,
+     main = "Arrests for Rape across US states",
+     ylab = "Number of US states",
+     xlab = "Arrests for Rape per 100k residents")
+```
