@@ -8,6 +8,10 @@
 data("USArrests")
 ls()
 names(USArrests)
+
+#Setting working directory
+setwd("/Users/Diegotab/GitHub/DiegoandIsabellesFantasticalFirstRepository")
+
 library(dplyr)
 
 #####Summary statistics#####
