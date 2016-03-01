@@ -77,6 +77,32 @@ library(dplyr)
 #we log the variable rape since its distribution is skewed
 log(USArrests$Rape) %>% hist
 
+#####Measures of dispersion: standard deviation, range, IQR#####
+
+for (i in 1:length(names(USArrests))) {
+  USArrests[, i] %>%
+    sd() %>%
+    round(digits = 1) %>%
+    paste(names(USArrests)[i], ., '\n') %>%  
+    cat()
+}
+#Murder=4.4 Assault=83.3 UrbanPop=14.5 Rape=9.4
+
+for (i in 1:length(names(USArrests))) {
+  USArrests[, i] %>%
+    range() %>%
+    round(digits = 1) %>%
+    paste(names(USArrests)[i], ., '\n') %>%  
+    cat()
+}
+#Murder= 0.8 17.4
+#Assault= 45 337
+#UrbanPop= 32 91
+#Rape= 7.3 46
+
+
+
+
 # Boxplots for three crime variables
 
 boxplot(USArrests$Murder,
