@@ -1,0 +1,35 @@
+---
+title: "Assignment 1 Final Output"
+output: pdf_document
+---
+
+This a summary of the descriptive statistics from Diego and Isabelle's first assignment for the Collaborative Social Science Data Analysis class.
+
+## *Table of Contents*
+#[Data Set 1: Average Yearly Temperatures in New Haven 1912-1971](#dataset1)
+#[Data Set 2: Violent Crime Rates by US State](#dataset2)
+
+\pagebreak
+
+#Data Set 1: Average Yearly Temperatures in New Haven 1912-1971
+>
+>
+Following are some descriptive statistics of the core R data set nhtemp, a time series of 60 observations recording the mean annual temperature in degrees Fahrenheit in New Haven, Connecticut, between 1912 and 1971.
+
+```{r, echo=FALSE}
+hist(nhtemp, 
+     main="Frequency of Average Yearly Temperatures", 
+     xlab="temperature")
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(nhtemp)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+To cite out of bibliography:
+bibliography:
+    - Citations.bib
