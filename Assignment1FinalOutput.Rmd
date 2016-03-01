@@ -125,25 +125,31 @@ boxplot(USArrests$Rape,
 ```
 
 ```{r, echo=FALSE}
+ggplot2::ggplot(USArrests, aes(Murder, Assault)) + geom_point() + geom_smooth() + theme_bw() + ggtitle("Murder arrests-Assault arrests Correlation") +
+  xlab("Murder arrests per 100k habitants") +
+  ylab("Assault arrests per 100k habitants")
+```
 
+```{r}
+cor.test(USArrests$Murder, USArrests$Assault)
 ```
 
 ```{r, echo=FALSE}
+ggplot2::ggplot(USArrests, aes(Murder, Rape)) + geom_point() + geom_smooth() + theme_bw() + ggtitle("Murder arrests-Rape arrests Correlation") +
+  xlab("Murder arrests per 100k habitants") +
+  ylab("Rape arrests per 100k habitants")
+```
 
+```{r}
+cor.test(USArrests$Murder, USArrests$Rape)
 ```
 
 ```{r, echo=FALSE}
-
+ggplot2::ggplot(USArrests, aes(Assault, Rape)) + geom_point() + geom_smooth() + theme_bw() + ggtitle("Assault arrests-Rape arrests Correlation") +
+  xlab("Assault arrests per 100k habitants") +
+  ylab("Rape arrests per 100k habitants")
 ```
 
-```{r, echo=FALSE}
-
-```
-
-```{r, echo=FALSE}
-
-```
-
-```{r, echo=FALSE}
-
+```{r}
+cor.test(USArrests$Assault, USArrests$Rape)
 ```
