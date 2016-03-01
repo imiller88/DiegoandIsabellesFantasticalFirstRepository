@@ -161,3 +161,4 @@ ggplot2::ggplot(USArrests, aes(Assault, Rape)) + geom_point() + geom_smooth() + 
   ylab("Rape arrests per 100k habitants")
 dev.print(png, "ggplotAssaultRape.png", width = 1024, height = 720)
 
+

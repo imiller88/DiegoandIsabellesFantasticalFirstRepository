@@ -105,3 +105,45 @@ hist(USArrests$Rape,
      ylab = "Number of US states",
      xlab = "Arrests for Rape per 100k residents")
 ```
+
+```{r, echo=FALSE}
+boxplot(USArrests$Murder,
+        main = "Murder Arrests",
+        ylab = "Arrests per 100k Inhabitants")
+```
+
+```{r, echo=FALSE}
+boxplot(USArrests$Assault,
+        main = "Assault Arrests",
+        ylab = "Arrests per 100k Inhabitants")
+```
+
+```{r, echo=FALSE}
+boxplot(USArrests$Rape,
+        main = "Rape Arrests",
+        ylab = "Arrests per 100k Inhabitants")
+```
+
+```{r, echo=FALSE}
+
+```
+
+```{r, echo=FALSE}
+
+```
+
+```{r, echo=FALSE}
+
+```
+
+```{r, echo=FALSE}
+
+```
+
+```{r, echo=FALSE}
+
+```
+
+```{r, echo=FALSE}
+
+```
