@@ -64,9 +64,6 @@ hist(USArrests$Rape,
      main = "Arrests for Rape across US states",
      ylab = "Number of US states",
      xlab = "Arrests for Rape per 100k residents")
-#variable rape is slightly skewed
-#we log the variable rape since its distribution is skewed
-log(USArrests$Rape) %>% hist
 
 #####Measures of dispersion: standard deviation, range, IQR#####
 for (i in 1:length(names(USArrests))) {
@@ -134,3 +131,9 @@ cor.test(USArrests$Murder, USArrests$Rape)
 #cor=0.5635788 
 cor.test(USArrests$Assault, USArrests$Rape)
 #cor=0.6652412
+
+#####Summarizing with LOESS#####
+library(ggplot2)
+ggplot2::ggplot(USArrests, aes(Murder, Assault)) + geom_point() + geom_smooth() + theme_bw()
+ggplot2::ggplot(USArrests, aes(Murder, Rape)) + geom_point() + geom_smooth() + theme_bw()
+ggplot2::ggplot(USArrests, aes(Assault, Rape)) + geom_point() + geom_smooth() + theme_bw()
