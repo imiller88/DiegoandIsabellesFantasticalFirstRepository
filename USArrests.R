@@ -127,4 +127,10 @@ plot(USArrests$Assault, USArrests$Rape,
      xlab = "Assault arrests per 100k Inhabitants",
      ylab = "Rape arrests per 100k Inhabitants")
 
-
+#####Correlation coefficients#####
+cor.test(USArrests$Murder, USArrests$Assault)
+#cor=0.8018733 
+cor.test(USArrests$Murder, USArrests$Rape)
+#cor=0.5635788 
+cor.test(USArrests$Assault, USArrests$Rape)
+#cor=0.6652412
