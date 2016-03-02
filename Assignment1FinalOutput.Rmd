@@ -1,24 +1,23 @@
 ---
 title: "Assignment 1 Final Output"
-output: pdf_document
+output: 
+    pdf_document:
+        toc: true
 ---
 
 This a summary of the descriptive statistics from Diego and Isabelle's first assignment for the Collaborative Social Science Data Analysis class.
 
-## *Table of Contents*
-#[Data Set 1: Average Yearly Temperatures in New Haven 1912-1971](#dataset1)
-#[Data Set 2: Violent Crime Rates by US State](#dataset2)
-
 \pagebreak
 
-#Data Set 1: Average Yearly Temperatures in New Haven 1912-1971
->
-###Introduction to the DataSet
+# Data Set 1: Average Yearly Temperatures in New Haven 1912-1971
+
+### Introduction to the DataSet
 The core R data set nhtemp, titled "Average Yearly Temperatures in New Haven" is a time series of 60 observations recording the mean annual temperature in degrees Fahrenheit in New Haven, Connecticut, between 1912 and 1971.
 
-###Descriptive Statistics
+### Descriptive Statistics
 
 If we look at the summary statistics, we learn that the average temperature has fallen within a small range for the duration of the 60 years. Otherwise, it tells us very little about the actual climate or any change in climate over time, as the temperatures are aggregated by year and not by month or season.
+
 ```{r}
 summary(nhtemp)
 ```
@@ -44,9 +43,9 @@ hist(nhtemp,
 
 \pagebreak
 
-#Data Set 2: Violent Crime Rates by US State
->
-###Introduction to the DataSet
+# Data Set 2: Violent Crime Rates by US State
+
+### Introduction to the DataSet
 
 The dataset USArrests contains statistics, in arrests per 100,000 residents for assault, murder, and rape in each of the 50 US states in 1973. It also provides the percent of the population living in urban areas.
 
@@ -78,6 +77,8 @@ summary(USArrests$UrbanPop)
 summary(USArrests$Rape)
 ```
 
+\pagebreak
+
 ```{r, echo=FALSE}
 hist(USArrests$Murder,
      main = "Arrests for Murder across US states",
@@ -92,6 +93,8 @@ hist(USArrests$Assault,
      xlab = "Arrests for Assault per 100k residents")
 ```
 
+\pagebreak
+
 ```{r, echo=FALSE}
 hist(USArrests$UrbanPop,
      main = "Share of Urban Population across US states",
@@ -105,6 +108,8 @@ hist(USArrests$Rape,
      ylab = "Number of US states",
      xlab = "Arrests for Rape per 100k residents")
 ```
+
+\pagebreak
 
 ```{r, echo=FALSE}
 boxplot(USArrests$Murder,
@@ -124,6 +129,8 @@ boxplot(USArrests$Rape,
         ylab = "Arrests per 100k Inhabitants")
 ```
 
+\pagebreak
+
 ```{r, echo=FALSE}
 library(ggplot2)
 ggplot2::ggplot(USArrests, aes(Murder, Assault)) + geom_point() + geom_smooth() + theme_bw() + ggtitle("Murder arrests-Assault arrests Correlation") +
@@ -135,6 +142,8 @@ ggplot2::ggplot(USArrests, aes(Murder, Assault)) + geom_point() + geom_smooth() 
 cor.test(USArrests$Murder, USArrests$Assault)
 ```
 
+\pagebreak
+
 ```{r, echo=FALSE}
 library(ggplot2)
 ggplot2::ggplot(USArrests, aes(Murder, Rape)) + geom_point() + geom_smooth() + theme_bw() + ggtitle("Murder arrests-Rape arrests Correlation") +
@@ -145,6 +154,8 @@ ggplot2::ggplot(USArrests, aes(Murder, Rape)) + geom_point() + geom_smooth() + t
 ```{r}
 cor.test(USArrests$Murder, USArrests$Rape)
 ```
+
+\pagebreak
 
 ```{r, echo=FALSE}
 library(ggplot2)
