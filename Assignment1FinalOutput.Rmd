@@ -61,7 +61,7 @@ There are 50 observations on the 4 following variables:
 
 ##Descriptive Statistics
 
-##Summary statistics
+##**Summary statistics**
 
 ```{r}
 summary(USArrests$Murder)
@@ -89,11 +89,14 @@ For rape arrests per 100,000 population, the mean is 21.23 and the median is 20.
 
 \pagebreak
 
-##Histograms
+##**Histograms**
 
 Secondly, we generate histograms in order to have a general idea about the distribution of the 4 variables contained in our dataset. For murder arrests per 100,000 population, the histogram tells us that the largest group of US states (12 states) has between 2 and 5 arrests for murder per 100,000 residents. There is only 1 state that has less than 2 arrests for murder per 100,000 residents and more than 16 states have between 6 and 10 arrests per 100,000 residents (two bars of the histogram).
 For assault arrests per 100,000 residents, the histogram tells us that the largest group of states (12 states) has between 100 and 150 arrests for assault per 100,000 residents. The second largest group of states (10 states) has between 250 and 300 arrests for assault per 100,000 residents. On the other hand, while 3 states only have between 0 and 50 arrests for assault per 100,000 residents, 2 states have between 300 and 350. 
-For the share of urban population in each US state, the largest group of states (12 states) has between 60 and 70 % of their population living in urban areas. Likewise, 10 states have between 70 and 80 % of their population living in urban areas. On the other hand, 2 states have less than 40 % of their population living in urban areas, and 1 state has more than 90% of urban population. When it comes to rape arrests per 100,000 residents, the distribution appears to be right skewed since a very small number of US states have more than 30 arrests for rape per 100,000 residents. The largest number of states (12 states) have between 15 and 20 arrests for rape per 100,000 residents.  
+For the share of urban population in each US state, the largest group of states (12 states) has between 60 and 70 % of their population living in urban areas. Likewise, 10 states have between 70 and 80 % of their population living in urban areas. On the other hand, 2 states have less than 40 % of their population living in urban areas, and 1 state has more than 90% of urban population. 
+When it comes to rape arrests per 100,000 residents, the distribution appears to be right skewed since a very small number of US states have more than 30 arrests for rape per 100,000 residents. The largest number of states (12 states) have between 15 and 20 arrests for rape per 100,000 residents. 
+
+\vspace{1cm}
 
 ```{r, echo=FALSE}
 hist(USArrests$Murder,
@@ -111,6 +114,8 @@ hist(USArrests$Assault,
      xlab = "Arrests for Assault per 100k residents")
 ```
 
+\vspace{1cm} 
+
 ```{r, echo=FALSE}
 hist(USArrests$UrbanPop,
      main = "Share of Urban Population across US states",
@@ -127,7 +132,9 @@ hist(USArrests$Rape,
      xlab = "Arrests for Rape per 100k residents")
 ```
 
-##Boxplots
+\vspace{1cm} 
+
+##**Boxplots**
 
 Now we make use of boxplots in order to provide a graphical representation of where the mean, median and interquartile range of our three crime variables are. 
 
@@ -137,11 +144,15 @@ boxplot(USArrests$Murder,
         ylab = "Arrests per 100k Inhabitants")
 ```
 
+\pagebreak
+
 ```{r, echo=FALSE}
 boxplot(USArrests$Assault,
         main = "Assault Arrests",
         ylab = "Arrests per 100k Inhabitants")
 ```
+
+\vspace{1cm}
 
 ```{r, echo=FALSE}
 boxplot(USArrests$Rape,
@@ -151,9 +162,11 @@ boxplot(USArrests$Rape,
 
 \pagebreak
 
-##Correlations
+##**Correlations**
 
-Finally, scatter plots help us assess whether there is correlation between our main variables of interest. 
+Finally, scatter plots help us assess whether there is correlation between our main variables of interest.
+
+\vspace{1cm}
 
 ```{r, echo=FALSE}
 library(ggplot2)
@@ -196,5 +209,8 @@ ggplot2::ggplot(USArrests, aes(Assault, Rape)) + geom_point() + geom_smooth() + 
 cor.test(USArrests$Assault, USArrests$Rape)
 ```
 
-The correlation between assault arrests and rape arrests is also positive.   
+The correlation between assault arrests and rape arrests is also positive.
+
+\vspace{1cm}
+
 In conclusion, there seems to be a strong positive correlation between the three variables of interest. Nevertheless, the strongest correlation is the one between murder arrests and assault arrests. 
