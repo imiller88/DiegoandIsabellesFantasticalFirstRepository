@@ -56,8 +56,6 @@ hist(USArrests$Murder,
      ylab = "Number of US states",
      xlab = "Arrests for Murder per 100k residents")
 dev.print(png, "Murder.png", width = 1024, height = 720)
-#8 US states have 10 arrests per 100,000 residents for murder
-#12 US states have around 4 arrests per 100,000 residents for murder
 hist(USArrests$Assault,
      main = "Arrests for Assault across US states",
      ylab = "Number of US states",
